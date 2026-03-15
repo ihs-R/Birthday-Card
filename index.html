@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wish for My Love</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="floating-hearts" id="floatingHearts"></div>
+    <div class="petals" id="petalsContainer"></div>
+    
+    
+    <div class="container">
+        <div class="progress-bar">
+            <div class="progress" id="progressBar"></div>
+        </div>
+
+        <!-- Step 1: Greeting -->
+        <div class="step" id="step1">
+            <h1>Happy Birthday!!!</h1>
+            <p>I hope you're having an amazing birthday <i class="fa fa-heart-o"></i></p>
+            <img src="data:image/jpeg;base64,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" style="height: 200px;width: 200px;" alt="">
+            <button class="btn" onclick="nextStep()">Next</button>
+        </div>
+
+        <!-- Step 2: Name Input -->
+        <div class="step" id="step2">
+            <h2>Please Enter Your Name!</h2>
+            <input type="text" class="name-input" id="nameInput" placeholder="Enter your name">
+            <button class="btn" onclick="saveName()">Continue</button>
+        </div>
+
+        <!-- Step 3: Heart Animation -->
+        <div class="step" id="step3">
+            <h2>For You, <span id="displayName">My Love</span></h2>
+            <p>Click on the emoji to have a little party!</p>
+            <div class="confetti-emoji" id="interactiveHeart" onclick="createConfetti()">🎉</div>
+            <div id="heartMessage" class="message-box">
+                <p>We're never too old to have some fun!</p>
+            </div>
+            <button class="btn" onclick="nextStep()">Click to see your last surprise!</button>
+        </div>
+
+        <!-- Step 4: Final Wish -->
+        <div class="step" id="step4">
+            <h1>🎉 Happy Birthday <span id="finalName">My Love 💖</span>! 🎂</h1>
+        
+            <p>✨ I hope you have amazing days filled with nothing but happiness and joy ✨</p>
+            <p>🌟 My only regret for being your friend was that we didn't hang out sooner especially when we were in atakent, but I am honestly so glad we still got to spend the the year with eachother it was definitely one of the most special years I could ever ask for and I will never forget the memories we made with eachother. You are honestly soo beautiful and smart and the most fun to hang out with (mashaallah) and those school people of yours are just too blind to see how amazingg you are. It's so their loss 😂🤷‍♀️   🌌</p>
+        
+            <p>⏳ I am honestly so so glad we got the chance to become friends even if for just a year (forever wish it was more than that 😢💔) though I would never trade the memories we did have FOR THE WORLD!! and I really hope we all meet again. Happy Birthday and I LOVE YOUUUU 🥰</p>
+        
+            <p>💌 Enjoy your day and NEVER hesitate to reach out if you ever want to talk 💫</p>
+        
+            <div class="signature">Yours truly, 💐✨</div>
+        
+            <button class="btn" onclick="goBack()"> Click To Return </button>
+        </div>
+        
+    </div>
+  <script src="script.js"></script>
+</body>
+</html>
